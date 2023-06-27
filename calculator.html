@@ -1,0 +1,135 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="calculator.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <title>FitWizard</title>
+</head>
+<nav class="navbar">
+  <div class="navbar__container">
+    <a href="index.html" id="navbar__logo">
+      <i class="fas fa-gem"></i>
+      <img src="images/logo.png" alt="pic" id="main__img" />
+      <p>FitWizard</p>
+    </a>
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+</nav>
+
+<div class="form__container">
+  <form onsubmit="getValues(); return false;">
+    <h1>Tell us about yourself</h1>
+    <div class="height">
+      <a>Input your height: (feet)</a><br /><br />
+      <input id="feet" /><br />
+      <a>Input your height: (inches)</a><br /><br />
+      <input id="inches" /><br />
+    </div>
+    <div class="info">
+      <a>Input your weight: (pounds)</a><br /><br />
+      <input id="weight" /><br />
+      <a>Input your age: (years)</a><br /><br />
+      <input id="age" /><br />
+    </div>
+    <div class="dropdown">
+      <br />
+      <label for="activity_factor"
+        >How frequently are you physically active?
+      </label>
+      <select name="activity_factor" id="activity_factor" required>
+        <option value="0"></option>
+        <option value="1">No Exercise</option>
+        <option value="2">Lightly Active</option>
+        <option value="3">Moderately Active</option>
+        <option value="4">Very Active</option></select
+      ><br /><br />
+      <label for="weight_goal">Choose your weight goal: </label>
+      <select name="weight_goal" id="weight_goal" required>
+        <option value="0"></option>
+        <option value="1">Gain Weight</option>
+        <option value="2">Maintain weight</option>
+        <option value="3">Lose Weight</option></select
+      ><br /><br />
+      <label for="sex">Choose your sex: </label>
+      <select name="sex" id="sex" required>
+        <option value="0"></option>
+        <option value="1">Male</option>
+        <option value="2">Female</option></select
+      ><br /><br /><br /><br />
+    </div>
+    <button type="submit">Obtain your results</button><br />
+    <span id="bmi_result"></span><br />
+    <span id="result"></span><br />
+  </form>
+</div>
+<script>
+  function getValues() {
+    let feet = document.getElementById("feet");
+    let feet_value = feet.value;
+
+    let inches = document.getElementById("inches");
+    let inches_value = inches.value;
+
+    let height = parseInt(feet_value) * 12 + parseInt(inches_value);
+
+    let weight = document.getElementById("weight");
+    let weight_value = weight.value;
+
+    let result = document.getElementById("result");
+
+    let bmi = 703 * (parseInt(weight_value) / height ** 2);
+
+    let age = document.getElementById("age");
+    let age_value = age.value;
+
+    let calories =
+      10 * (parseInt(weight_value) / 2.205) +
+      6.25 * height * 2.54 -
+      5 * parseInt(age_value);
+
+    let activity_factor = document.getElementById("activity_factor");
+    let activity_factor_value = activity_factor.value;
+
+    let weight_goal = document.getElementById("weight_goal");
+    let weight_goal_value = weight_goal.value;
+
+    let sex = document.getElementById("sex");
+    let sex_value = sex.value;
+
+    if (activity_factor_value === "1") {
+      calories *= 1.2;
+    }
+    if (activity_factor_value === "2") {
+      calories *= 1.375;
+    }
+    if (activity_factor_value === "3") {
+      calories *= 1.55;
+    }
+    if (activity_factor_value === "4") {
+      calories *= 1.725;
+    }
+    if (weight_goal_value === "1") {
+      calories += 500;
+    }
+    if (weight_goal_value === "3") {
+      calories -= 500;
+    }
+    if (sex_value === "1") {
+      calories += 5;
+    }
+    if (sex_value === "2") {
+      calories -= 161;
+    }
+    bmi_result.innerText = "Your Bmi:" + Math.round(bmi * 100) / 100;
+    result.innerText = "Your Calories:" + Math.round(calories * 100) / 100;
+  }
+</script>
