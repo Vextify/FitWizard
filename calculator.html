@@ -61,8 +61,16 @@
       ><br /><br /><br /><br />
     </div>
     <button type="submit">Obtain your results</button><br />
-    <span id="bmi_result"></span><br />
-    <span id="result"></span><br />
+    <div class="the__results">
+      <div class="normal__results">
+        <span id="bmi_result"></span><br />
+        <span id="result"></span><br />
+      </div>
+      <div class="chart">
+        <span id="weight_result"></span><br /><br />
+        <a href="images/pic33.jpg" target="_blank"> See BMI Chart </a>
+      </div>
+    </div>
   </form>
 </div>
 <script>
@@ -126,6 +134,25 @@
     bmi_result.innerText = "Your Bmi:" + Math.round(bmi * 100) / 100;
     result.innerText =
       "Your Calories per Day:" + Math.round(calories * 100) / 100;
+
+    var x = document.getElementById("weight_result");
+
+    if (bmi >= 18 && bmi <= 24) {
+      weight_result.innerText = "Healthy Weight";
+      x.style.color = "green";
+    }
+    if (bmi >= 25 && bmi <= 29) {
+      weight_result.innerText = "Overweight";
+      x.style.color = "yellow";
+    }
+    if (bmi >= 30 && bmi <= 39) {
+      weight_result.innerText = "Obese";
+      x.style.color = "orange";
+    }
+    if (bmi >= 40) {
+      weight_result.innerText = "Severly Obese";
+      x.style.color = "red";
+    }
   }
 </script>
 <script src="apps.js"></script>
