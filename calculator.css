@@ -41,6 +41,7 @@
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
+  margin-left: 50px;
 }
 
 #main__img {
@@ -251,9 +252,22 @@ form {
   .dropdown label {
     font-size: 1rem;
   }
+
+  .chart a {
+    color: #fff;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  form {
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 4vw;
+    width: 90%;
+  }
+
   .form__container a {
     font-size: 1rem;
     color: #141414;
@@ -319,5 +333,16 @@ form {
 
   .dropdown label {
     font-size: 1rem;
+  }
+
+  .chart a {
+    color: #fff;
+  }
+
+  #navbar__logo {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    color: #551a8b;
   }
 }
