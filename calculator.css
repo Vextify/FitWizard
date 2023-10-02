@@ -381,12 +381,12 @@ form {
   }
 
   .form__container a {
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: #141414;
   }
 
   .form__container span {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
   }
 
@@ -423,7 +423,7 @@ form {
   }
 
   .form__container button {
-    font-size: 1rem;
+    font-size: 0.7rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -453,10 +453,6 @@ form {
     color: #fff;
   }
 
-  .dropdown {
-    font-size: 0rem;
-  }
-
   .dropdown select {
     font-size: 0.5rem;
     background-color: #f5f5f5;
@@ -466,7 +462,7 @@ form {
   }
 
   .dropdown label {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .chart a {
@@ -482,5 +478,37 @@ form {
     -ms-flex-align: center;
     align-items: center;
     color: #551a8b;
+    height: 60%;
+    width: 43%;
+    margin-right: 2.9rem;
+    margin-top: 2rem;
+  }
+  #navbar__logo p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.05rem;
+    cursor: pointer;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #551a8b;
+  }
+  .navbar {
+    background: #201a23;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
   }
 }
