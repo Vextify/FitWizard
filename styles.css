@@ -221,7 +221,7 @@
 @media screen and (max-width: 1800px) {
   .main__container {
     background: #201a23;
-    height: 4250%;
+    height: 450%;
     width: 100%;
   }
 
@@ -236,5 +236,48 @@
     margin-top: 10vh;
     height: 100%;
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main__container {
+    background: #201a23;
+    height: 450%;
+    width: 100%;
+  }
+
+  .explanation {
+    margin: auto;
+    height: 100%;
+    width: 90%;
+  }
+
+  .bmi__explanation {
+    margin: auto;
+    margin-top: 10vh;
+    height: 100%;
+    width: 90%;
+  }
+
+  #navbar__logo {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    cursor: pointer;
+    text-decoration: none;
+    height: 90%;
+    width: 50%;
+  }
+
+  #navbar__logo p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.5rem;
+    cursor: pointer;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #551a8b;
   }
 }
