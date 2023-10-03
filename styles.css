@@ -235,7 +235,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .main__container {
     background: #201a23;
     height: 210%;
