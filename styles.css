@@ -1,13 +1,3 @@
-html {
-  height: 100%;
-}
-body {
-  height: 100%;
-}
-#index {
-  height: 100%;
-}
-
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -20,8 +10,6 @@ body {
 .navbar {
   background: #201a23;
   height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -214,7 +202,6 @@ body {
 }
 
 .bmi__img__container {
-  margin-top: 10vh;
   display: flex;
   height: 100%;
   width: 100%;
@@ -230,7 +217,7 @@ body {
 @media screen and (max-width: 1800px) {
   .main__container {
     background: #201a23;
-    height: 450%;
+    height: 100%;
     width: 100%;
   }
 
@@ -274,9 +261,9 @@ body {
     display: flex;
     cursor: pointer;
     text-decoration: none;
-    height: 75%;
+    height: 60%;
     width: 50%;
-    margin-top: 10px;
+    margin-top: 16px;
   }
 
   #navbar__logo p {
@@ -330,15 +317,10 @@ body {
   }
 
   .bmi__img__container {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+    display: none;
   }
 
-  .bmi__img {
-    height: 150%;
-    width: 80%;
+  .final__exp {
+    display: none;
   }
 }
