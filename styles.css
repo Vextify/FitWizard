@@ -200,19 +200,6 @@
   width: 30%;
 }
 
-.bmi__img__container {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-#bmi__img {
-  height: 65%;
-  width: 100%;
-}
-
 @media screen and (max-width: 1800px) {
   .main__container {
     background: #201a23;
@@ -313,13 +300,5 @@
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-  }
-
-  .bmi__img__container {
-    display: none;
-  }
-
-  .final__exp {
-    display: none;
   }
 }
