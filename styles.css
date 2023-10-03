@@ -34,7 +34,7 @@
   z-index: 1;
   width: 100%;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 20px;
 }
 
 #navbar__logo {
@@ -79,7 +79,6 @@
   -ms-flex-align: center;
   align-items: center;
   padding: 0;
-  margin-left: 2vh;
   width: 26vh;
   font-size: 1.3rem;
 }
@@ -261,8 +260,8 @@
     display: flex;
     cursor: pointer;
     text-decoration: none;
-    height: 60%;
-    width: 50%;
+    height: 70%;
+    width: 40%;
     margin-top: 16px;
   }
 
