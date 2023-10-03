@@ -11,6 +11,7 @@
   margin: 0;
   padding: 0;
   font-family: "Public Sans";
+  background: #201a23;
 }
 
 .navbar {
@@ -136,7 +137,7 @@
 
 .main__container {
   background: #201a23;
-  height: 260%;
+  height: 280%;
   width: 100%;
 }
 
@@ -211,6 +212,11 @@
 
 .bmi__img__container {
   margin-top: 10vh;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 #bmi__img {
@@ -318,5 +324,19 @@
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+  }
+
+  .bmi__img__container {
+    margin-top: 10vh;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #bmi__img {
+    height: 65%;
+    width: 100%;
   }
 }
