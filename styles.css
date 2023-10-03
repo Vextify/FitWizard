@@ -1,9 +1,12 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+#index {
+  height: 100%;
+}
 
 * {
   -webkit-box-sizing: border-box;
@@ -137,7 +140,7 @@
 
 .main__container {
   background: #201a23;
-  height: 280%;
+  height: 100%;
   width: 100%;
 }
 
@@ -248,7 +251,7 @@
 @media screen and (max-width: 600px) {
   .main__container {
     background: #201a23;
-    height: 480%;
+    height: 310%;
     width: 100%;
   }
 
@@ -327,7 +330,6 @@
   }
 
   .bmi__img__container {
-    margin-top: 10vh;
     display: flex;
     height: 100%;
     width: 100%;
@@ -335,8 +337,8 @@
     justify-content: center;
   }
 
-  #bmi__img {
-    height: 65%;
-    width: 100%;
+  .bmi__img {
+    height: 150%;
+    width: 80%;
   }
 }
