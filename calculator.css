@@ -17,9 +17,6 @@
   -ms-flex-align: center;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
 }
 
 .navbar__container {
@@ -27,13 +24,12 @@
   display: -ms-flexbox;
   display: flex;
   height: 80px;
-  z-index: 1;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   justify-content: center;
   margin-left: 5px;
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 #navbar__logo p {
@@ -497,8 +493,6 @@ form {
     -ms-flex-align: center;
     align-items: center;
     font-size: 1rem;
-    position: sticky;
-    top: 0;
     z-index: 999;
   }
 }
